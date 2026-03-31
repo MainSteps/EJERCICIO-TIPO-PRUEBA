@@ -49,4 +49,10 @@ public class LibroController {
     public int totalLibros() {
         return libroService.totalLibros();
     }
+
+    @GetMapping("/autor/{autorX}")
+    public List<Libro> buscarPorAutorX(@PathVariable String autorX){
+        return libroService.autorLibro(autorX);
+    }
+
 }

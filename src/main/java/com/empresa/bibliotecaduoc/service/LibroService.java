@@ -40,4 +40,8 @@ public class LibroService {
     public int totalLibros() {
         return libroRepository.totalLibros();
     }
+
+    public List<Libro> autorLibro(String autorPedido){
+        return libroRepository.buscarPorAutor(autorPedido);
+    }
 }

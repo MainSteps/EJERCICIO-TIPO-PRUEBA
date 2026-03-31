@@ -74,4 +74,17 @@ public class LibroRepository {
     public int totalLibros() {
         return listaLibros.size();
     }
+
+
+    public List<Libro> buscarPorAutor(String autorBuscado){
+        List<Libro> autores = new ArrayList<>();
+        for (Libro libro : listaLibros){
+            if (libro.getAutor().equalsIgnoreCase(autorBuscado)){
+                autores.add(libro);
+            }
+        }
+        return autores;
+    }
+
+    
 }
